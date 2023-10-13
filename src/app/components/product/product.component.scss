@@ -1,0 +1,70 @@
+:host {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius);
+  border: var(--border);
+
+  img {
+    width: 100%;
+  }
+
+  .product {
+    $self: &;
+    &__image {
+      height: 130px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  
+    &__content {
+      padding: 9px 13px 23px 17px;
+    }
+  
+    &__title {
+      font-family: Roboto, sans-serif;
+      font-weight: var(--bold);
+      font-size: 20px;
+      margin-bottom: 9px;
+      color: var(--title);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      line-height: 26px;
+    }
+  
+    &__description {
+      height: 44px;
+      overflow: hidden;
+      font-size: 16px;
+      margin-bottom: 13px;
+      line-height: 22px;
+    }
+  
+    &__bottom-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+  
+    &__price-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  
+      &--price {
+        color: var(--title);
+        font-size: 14px;
+        font-weight: var(--bold);
+        text-decoration: line-through;
+      }
+      
+      &--discounted {
+        color: var(--highlight);
+        font-size: 20px;
+        font-weight: var(--bold);
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="filter">
+  <label for="search">Search:</label>
+  <input
+    class="input input__text"
+    type="text"
+    id="search"
+    [(ngModel)]="search"
+    placeholder="What are you looking for?"
+  />
+</div>
+
+<div class="filter">
+  <label for="category">Category:</label>
+  <div class="select__wrapper">
+    <div class="select__placeholder" *ngIf="category === ''">
+      Select category
+    </div>
+    <div class="select__arrow">▼</div>
+    <select class="input input__select" id="category" [(ngModel)]="category">
+      <option *ngFor="let category of categories()" [value]="category">
+        {{ category }}
+      </option>
+    </select>
+  </div>
+</div>

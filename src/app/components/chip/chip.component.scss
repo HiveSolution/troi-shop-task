@@ -1,0 +1,39 @@
+:host {
+  border: none;
+  border-radius: var(--radius);
+  background-color: var(--highlight);
+  color: #fff;
+  margin-right: 10px;
+  font-size: 16px;
+  height: 30px;
+  padding: 4px 10px 4px 13px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 250ms, color 250ms;
+
+  .chip__arrow {
+    overflow: hidden;
+    width: 12px;
+    font-size: 12px;
+    margin-left: 10px;
+    color: #fff;
+    transition: transform 250ms, width 250ms;
+  }
+}
+
+:host(.chip--desc) {
+  .chip__arrow {
+    transform: rotate(180deg);
+  }
+}
+
+:host(.chip--disabled) {
+  background-color: var(--background-dark);
+  color: var(--title);
+
+  .chip__arrow {
+    width: 0px;
+  }
+}

@@ -1,0 +1,17 @@
+@use 'app/scss/variables.scss';
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+}
+
+@import 'app/scss/input.scss'

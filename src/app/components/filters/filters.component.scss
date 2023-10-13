@@ -1,0 +1,40 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+}
+
+.filter {
+  margin-right: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  
+  &:last-child {
+    margin-right: 0;
+  }
+
+  label {
+    font-size: 16px;
+    font-weight: var(--semi-bold);
+    margin-bottom: 3px;
+  }
+
+  input {
+    width: 385px;
+  }
+
+  select {
+    width: 195px;
+  }
+
+  @media (max-width: 660px) {
+    margin-right: 0;
+    width: 100%;
+
+    input, select {
+      width: 100%;
+    }
+  }
+}

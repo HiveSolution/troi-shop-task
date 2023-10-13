@@ -1,0 +1,7 @@
+<ng-container *ngFor="let key of sortKeys">
+  <app-chip
+    [label]="key"
+    [mode]="$any(key !== sortKey() ? 'chip--disabled' : 'chip--' + sortMode())"
+    (click)="updateSortKey(key)"
+  ></app-chip>
+</ng-container>

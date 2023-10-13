@@ -1,0 +1,22 @@
+<div
+  class="product__image"
+  style="background-image: url('{{ product.thumbnail }}');"
+></div>
+<div class="product__content">
+  <p class="product__title">{{ product.title }}</p>
+  <p class="product__description">{{ product.description }}</p>
+
+  <div class="product__bottom-wrapper">
+    <div class="product__price-wrapper">
+      <span class="product__price-wrapper--discounted">{{
+        product.discountPrice || product.price | currency
+      }}</span>
+      <span
+        class="product__price-wrapper--price"
+        *ngIf="product.discountPrice"
+        >{{ product.price | currency }}</span
+      >
+    </div>
+    <app-rating [rating]="product.rating"></app-rating>
+  </div>
+</div>

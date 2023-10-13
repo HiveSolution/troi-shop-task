@@ -1,0 +1,12 @@
+<app-loader *ngIf="loading()"></app-loader>
+<main>
+  <h1>Front End Challenge</h1>
+  <app-filters></app-filters>
+  <app-divider></app-divider>
+  <div class="sorting-wrapper">
+    <app-sorting></app-sorting>
+    <div class="results">{{ products().length }} of {{ total() }} results</div>
+  </div>
+  <app-products [products]="products()"></app-products>
+  <app-pagination></app-pagination>
+</main>

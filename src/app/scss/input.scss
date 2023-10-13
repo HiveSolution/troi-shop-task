@@ -1,0 +1,54 @@
+.input {
+  font-size: 16px;
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 10px 16px 8px;
+  transition: border-color 250ms;
+  
+  &:focus {
+    outline: none;
+    border: var(--border);
+    border-color: var(--highlight);
+  }
+
+  &__text {
+    &::placeholder {
+      font-size: 16px;
+      color: var(--text-light);
+    }
+  }
+
+  &__select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+
+.select {
+  $self: &;
+  &__wrapper {
+    position: relative;
+  
+    #{ $self }__placeholder, #{ $self }__arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+  
+    #{ $self }__placeholder {
+      left: 16px;
+      font-size: 16px;
+      color: var(--text-light);
+    }
+  
+    #{ $self }__arrow {
+      right: 16px;
+      font-size: 12px;
+      color: var(--dropdown-arrow);
+    }
+  }
+}

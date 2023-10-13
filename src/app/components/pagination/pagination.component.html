@@ -1,0 +1,28 @@
+<div class="limit">
+  <div class="select__wrapper">
+    <div class="select__arrow">▼</div>
+    <select class="input input__select" id="limit" [(ngModel)]="limit">
+      <span class="placeholder"></span>
+      <option *ngFor="let limit of limits" [value]="limit">
+        {{ limit }}
+      </option>
+    </select>
+  </div>
+</div>
+<div class="pagination" *ngIf="pages.length > 1">
+  <div
+    class="pagination__arrow pagination__arrow--reverse"
+    (click)="previousPage()"
+  >
+    <span>›</span>
+  </div>
+  <div
+    class="pagination__page"
+    *ngFor="let page of pages"
+    (click)="selectPage(page)"
+    [ngClass]="{ 'pagination__page--active': currentPage === page }"
+  >
+    {{ page }}
+  </div>
+  <div class="pagination__arrow" (click)="nextPage()"><span>›</span></div>
+</div>
